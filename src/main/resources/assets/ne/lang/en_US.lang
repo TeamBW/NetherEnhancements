@@ -1,9 +1,9 @@
 #Blocks
-tile.testBlock.name=Test Block
+tile.blockTest.name=Test Block
+tile.blockOmniiteOre.name=Omniite Ore
 
 #Items
-item.netherCookieItem.name=Nether Cookies
-item.coldBlazePowderItem.name=Cold Blaze Powder
+item.itemNetherCookie.name=Nether Cookies
 
 #Misc
 itemGroup.ne=Nether Enhancements

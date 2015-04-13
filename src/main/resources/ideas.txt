@@ -1,7 +1,6 @@
-Lakes of Omniite
+Omniite Ore
 Cold Blaze
 Cold Blaze Powder - temp recipe blazepowder 4 water buckets, and 4 snow or ice
-Nether brick bucket
 Omniite bucket surrounded by cold blaze powder makes an omniite gem
 Omniite tools and armor
 Chakonium lakes - second recipe omniite mixed with unstable blaze powder
@@ -11,3 +10,15 @@ Cold blazepowder in moltenizer plus lava makes unstable blazepowder
 Chakonium plus unstable blazepowder in processor makes Chakonium gem
 Chakonium tools and armor
 Lucifer the nether boss
+
+-Omniite Ore
+-Activated blaze powder
+-unstable blazepowder - blazepowder mixed with activaited blazepowder
+-omniite ore plus unstable blaze powder makes an omniite gem
+omniite tools and armor
+-hammer - container crafting
+-hammer plus obsidian makes chunks of obsidian
+-activated blaze powder plus chunks of obsidian makes chunk of dark blaze powder
+-chunk of dark blaze powder plus hammer makes 8 dark blaze powder
+-omniite plus dark blaze powder makes chakonium
+chakonium tools and armor

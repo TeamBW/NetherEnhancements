@@ -1,12 +1,13 @@
 package com.teambw.ne.common.item.misc;
 
 import com.teambw.ne.client.gui.ModTab;
+import com.teambw.ne.common.item.RegisterItems;
 import net.minecraft.item.Item;
 
-public class ColdBlazePowderItem extends Item {
-    public ColdBlazePowderItem() {
+public class ItemHammer extends Item {
+    public ItemHammer() {
         super();
-        this.setUnlocalizedName("coldBlazePowderItem");
         this.setCreativeTab(ModTab.MAIN);
+        this.setContainerItem(RegisterItems.itemHammer);
     }
 }

@@ -1,6 +1,7 @@
 package com.teambw.ne.common;
 
 import com.teambw.ne.common.block.RegisterBlocks;
+import com.teambw.ne.common.handler.DropHandler;
 import com.teambw.ne.common.helper.LogHelper;
 import com.teambw.ne.common.item.RegisterItems;
 import com.teambw.ne.common.lib.LibMisc;
@@ -11,6 +12,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = LibMisc.ID, name = LibMisc.NAME, version = LibMisc.VERISON)
 public class NetherEnhancements {
@@ -26,8 +28,8 @@ public class NetherEnhancements {
 
         LogHelper.info("Pre Initialization Started");
 
-        RegisterBlocks.init();
-        RegisterItems.init();
+        RegisterBlocks.preInit();
+        RegisterItems.preInit();
 
         LogHelper.info("Pre Initialization Complete");
     }
@@ -37,6 +39,7 @@ public class NetherEnhancements {
         LogHelper.info("Initialization Started");
 
         MiscRecipes.init();
+        MinecraftForge.EVENT_BUS.register(new DropHandler());
 
         LogHelper.info("Initialization Complete");
     }
