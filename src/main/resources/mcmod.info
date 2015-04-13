@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ne",
+  "name": "Nether Enhancements",
+  "description": "Write stuff here before releasing.",
+  "version": "1.7.10-15.12.4-R0.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Chaka"],
+  "credits": "FireBall1725, For helping me realise. 1.8 sucks.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

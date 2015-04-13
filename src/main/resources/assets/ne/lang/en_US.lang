@@ -1,0 +1,9 @@
+#Blocks
+tile.testBlock.name=Test Block
+
+#Items
+item.netherCookieItem.name=Nether Cookies
+item.coldBlazePowderItem.name=Cold Blaze Powder
+
+#Misc
+itemGroup.ne=Nether Enhancements
