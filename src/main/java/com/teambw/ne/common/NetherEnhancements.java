@@ -1,5 +1,6 @@
 package com.teambw.ne.common;
 
+import com.teambw.ne.client.gui.GuiHandler;
 import com.teambw.ne.common.block.RegisterBlocks;
 import com.teambw.ne.common.handler.DropHandler;
 import com.teambw.ne.common.helper.LogHelper;
@@ -12,6 +13,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = LibMisc.ID, name = LibMisc.NAME, version = LibMisc.VERISON)
@@ -40,6 +42,8 @@ public class NetherEnhancements {
 
         MiscRecipes.init();
         MinecraftForge.EVENT_BUS.register(new DropHandler());
+        proxy.registerKeyBindings();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
         LogHelper.info("Initialization Complete");
     }
