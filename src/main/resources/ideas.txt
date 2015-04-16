@@ -25,5 +25,6 @@ chakonium tools and armor
 
 netherrack tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
 netherquartz  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
+netherbrick  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
 blaze rod  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
 nether star  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
