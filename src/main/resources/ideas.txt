@@ -23,8 +23,8 @@ omniite tools and armor
 -omniite plus dark blaze powder makes chakonium
 chakonium tools and armor
 
-netherrack tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
-netherquartz  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
-netherbrick  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
-blaze rod  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
-nether star  tools and armor - small, normal, empowered(for tools)/large(for armor), extreme
+netherrack tools and armor - normal, empowered, extreme
+netherquartz  tools and armor - normal, empowered, extreme
+netherbrick  tools and armor - normal, empowered, extreme
+blaze rod  tools and armor - normal, empowered, extreme
+nether star  tools and armor - normal, empowered, extreme
