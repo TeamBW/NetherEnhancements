@@ -1,13 +1,12 @@
 package com.teambw.ne.common.item;
 
-import com.teambw.ne.common.item.equipment.tool.omniite.ToolOmniiteSword;
+import com.teambw.ne.common.item.equipment.tool.omniite.*;
 import com.teambw.ne.common.item.gem.ItemChakoniumGem;
 import com.teambw.ne.common.item.gem.ItemOmniiteGem;
 import com.teambw.ne.common.item.misc.*;
 import com.teambw.ne.common.lib.LibToolMaterials;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.*;
 
 public class RegisterItems {
 
@@ -15,6 +14,14 @@ public class RegisterItems {
             itemHammer, itemChunkOfObsidian, itemDarkBlazePowder, itemChunkOfDarkBlazePowder, itemChakoniumGem;
 
     public static ItemSword toolOmniiteSword;
+
+    public static ItemPickaxe toolOmniitePickaxe;
+
+    public static ItemSpade toolOmniiteShovel;
+
+    public static ItemAxe toolOmniiteAxe;
+
+    public static ItemHoe toolOmniiteHoe;
 
     public static void preInit() {
 
@@ -29,6 +36,14 @@ public class RegisterItems {
         itemChakoniumGem = registerItem("itemChakoniumGem", new ItemChakoniumGem());
 
         toolOmniiteSword = registerItem("toolOmniiteSword", new ToolOmniiteSword(LibToolMaterials.OMNIITE));
+
+        toolOmniitePickaxe = registerItem("toolOmniitePickaxe", new ToolOmniitePickaxe(LibToolMaterials.OMNIITE));
+
+        toolOmniiteShovel = registerItem("toolOmniiteShovel", new ToolOmniiteShovel(LibToolMaterials.OMNIITE));
+
+        toolOmniiteAxe = registerItem("toolOmniiteAxe", new ToolOmniiteAxe(LibToolMaterials.OMNIITE));
+
+        toolOmniiteHoe = registerItem("toolOmniiteHoe", new ToolOmniiteHoe(LibToolMaterials.OMNIITE));
     }
 
     private static <T extends Item> T registerItem(String name, T item) {
