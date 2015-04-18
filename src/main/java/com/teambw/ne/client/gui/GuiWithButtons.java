@@ -7,8 +7,8 @@ public class GuiWithButtons extends GuiScreen {
 
     public static final int GUI_ID = 21;
 
-    public final int xSizeOfTexture = 176;
-    public final int ySizeOfTexture = 88;
+    public final int xSizeOfTexture = 800;
+    public final int ySizeOfTexture = 400;
 
     @Override
     public void drawScreen(int x, int y, float f) {
@@ -23,5 +23,11 @@ public class GuiWithButtons extends GuiScreen {
         drawTexturedModalRect(posX, posY, 0, 0, xSizeOfTexture, ySizeOfTexture);
 
         super.drawScreen(x, y, f);
+    }
+
+    @Override
+    public boolean doesGuiPauseGame() {
+
+        return false;
     }
 }

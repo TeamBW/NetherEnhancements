@@ -25,7 +25,7 @@ public class ItemNetherCookie extends Item {
         if (worldID != -1) {
             world.createExplosion(null, x, y, z, 2F, true);
         } else if (worldID == -1) {
-            player.openGui(NetherEnhancements.instance, 20, player.worldObj, (int) x, (int) y, (int) z);
+            player.openGui(NetherEnhancements.instance, 21, player.worldObj, (int) x, (int) y, (int) z);
         }
 
         return itemStack;

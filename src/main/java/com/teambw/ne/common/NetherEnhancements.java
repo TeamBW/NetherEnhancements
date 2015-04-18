@@ -8,12 +8,15 @@ import com.teambw.ne.common.item.RegisterItems;
 import com.teambw.ne.common.lib.LibMisc;
 import com.teambw.ne.common.proxy.CommonProxy;
 import com.teambw.ne.common.recipe.MiscRecipes;
+import com.teambw.ne.common.world.OreGeneration;
+import com.teambw.ne.common.world.WorldGen;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = LibMisc.ID, name = LibMisc.NAME, version = LibMisc.VERISON)
@@ -32,6 +35,9 @@ public class NetherEnhancements {
 
         RegisterBlocks.preInit();
         RegisterItems.preInit();
+
+        GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
+        GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 
         LogHelper.info("Pre Initialization Complete");
     }
