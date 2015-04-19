@@ -8,32 +8,38 @@ import net.minecraft.world.chunk.IChunkProvider;
 import java.util.Random;
 
 public class WorldGen implements IWorldGenerator {
+
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 
         switch (world.provider.dimensionId) {
-            case -1: generateNether(world, random, chunkX*16, chunkZ*16);
+
+            case -1:
+                generateNether(world, random, chunkX, chunkZ);
                 break;
-            case 0: generateOverworld(world, random, chunkX*16, chunkZ*16);
+            case 0:
+                generateOverworld(world, random, chunkX, chunkZ);
+                break;
+            case 1:
+                generateSky(world, random, chunkX, chunkZ);
                 break;
         }
     }
 
-    private void generateNether(World world, Random random, int blockX, int blockZ) {
+    public void generateNether(World world, Random random, int x, int z) {
 
-        int Xcoordl = blockX + random.nextInt(16);
-        int Ycoordl = random.nextInt(80);
-        int Zcoordl = blockZ + random.nextInt(16);
+        int Xcoord1 = x + random.nextInt(16);
+        int Ycoord1 = random.nextInt(60);
+        int Zcoord1 = z + random.nextInt(16);
 
-        (new GeneratorNetherDungeon()).generate(world, random, 500, 100, 500);
+        (new GeneratorNetherDungeon()).generate(world, random, Xcoord1, Ycoord1, Zcoord1);
     }
 
-    private void generateOverworld(World world, Random random, int blockX, int blockZ) {
+    public void generateOverworld(World world, Random random, int x, int z) {
 
-        int Xcoordl = blockX + random.nextInt(16);
-        int Ycoordl = random.nextInt(80);
-        int Zcoordl = blockZ + random.nextInt(16);
+    }
 
-        (new GeneratorNetherDungeon()).generate(world, random, 500, 100, 500);
+    public void generateSky(World world, Random random, int x, int z) {
+
     }
 }

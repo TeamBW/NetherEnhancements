@@ -37,7 +37,7 @@ public class NetherEnhancements {
         RegisterItems.preInit();
 
         GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
-        GameRegistry.registerWorldGenerator(new WorldGen(), 0);
+        //GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 
         LogHelper.info("Pre Initialization Complete");
     }

@@ -1,5 +1,6 @@
 package com.teambw.ne.common.world.structures;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -8,26 +9,49 @@ import java.util.Random;
 
 public class GeneratorNetherDungeon extends WorldGenerator {
 
-    @Override
-    public boolean generate(World world, Random random, int x, int y, int z) {
+    protected Block[] getValidSpawnBlocks() {
+        return new Block[] {
+                Blocks.dirt, Blocks.grass, Blocks.stone
+        };
+    }
 
-        /*if (world.getBlock(x, y, z) != Blocks.netherrack || world.getBlock(x, y, z) != Blocks.air) {
-            return false;
-        }*/
+    public boolean locationIsValidSpawn(World world, int x, int y, int z) {
 
-        for (int x1 = 0; x1 <= 1; x1++) {
-            for (int y1 = 0; y1 < 2; y1++) {
-                for (int z1 = 0; z1 < 1; z1++) {
-                    if ((x1 == 1) && (y1 >= 1 && y1 <= 2) && (z1 == 1)) {
-                        continue;
-                    }
+        int distanceToAir = 0;
+        Block check = world.getBlock(x, y, z);
 
-                    world.setBlock(x, y, z, Blocks.diamond_block);
-                    world.setBlock(x, y++, z, Blocks.lapis_block);
-                }
+        while (check != Blocks.air) {
+            if (distanceToAir > 3) {
+                return false;
             }
+
+            distanceToAir++;
+            check = world.getBlock(x, y + distanceToAir, z);
         }
 
-        return true;
+        y += distanceToAir -1;
+
+        Block block = world.getBlock(x, y, z);
+        Block blockAbove = world.getBlock(x, y + 1, z);
+        Block blockBelow = world.getBlock(x, y - 1, z);
+
+        for (Block i : getValidSpawnBlocks()) {
+            if (blockAbove != Blocks.air) {
+                return false;
+            }
+            if (block == i) {
+
+            } else if (block == Blocks.snow && blockBelow == i) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public GeneratorNetherDungeon() {}
+
+    @Override
+    public boolean generate(World p_76484_1_, Random p_76484_2_, int p_76484_3_, int p_76484_4_, int p_76484_5_) {
+        return false;
     }
 }
