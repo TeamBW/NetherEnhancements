@@ -2,7 +2,6 @@ package com.teambw.ne.common;
 
 import com.jadarstudios.developercapes.DevCapes;
 import com.teambw.ne.client.gui.GuiHandler;
-import com.teambw.ne.client.proxy.ClientProxy;
 import com.teambw.ne.common.block.RegisterBlocks;
 import com.teambw.ne.common.handler.DropHandler;
 import com.teambw.ne.common.helper.LogHelper;
@@ -39,7 +38,7 @@ public class NetherEnhancements {
         RegisterItems.preInit();
 
         GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
-        //GameRegistry.registerWorldGenerator(new WorldGen(), 0);
+        GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 
         LogHelper.info("Pre Initialization Complete");
     }
