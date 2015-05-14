@@ -1,6 +1,8 @@
 package com.teambw.ne.common;
 
+import com.jadarstudios.developercapes.DevCapes;
 import com.teambw.ne.client.gui.GuiHandler;
+import com.teambw.ne.client.proxy.ClientProxy;
 import com.teambw.ne.common.block.RegisterBlocks;
 import com.teambw.ne.common.handler.DropHandler;
 import com.teambw.ne.common.helper.LogHelper;
@@ -50,6 +52,8 @@ public class NetherEnhancements {
         MinecraftForge.EVENT_BUS.register(new DropHandler());
         proxy.registerKeyBindings();
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
+
+        DevCapes.getInstance().registerConfig(LibMisc.CAPES_JSON);
 
         LogHelper.info("Initialization Complete");
     }

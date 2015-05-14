@@ -9,4 +9,7 @@ public class LibMisc {
     //Proxy's
     public static final String CLIENT_PROXY = "com.teambw.ne.client.proxy.ClientProxy";
     public static final String SERVER_PROXY = "com.teambw.ne.common.proxy.ServerProxy";
+
+    //Capes
+    public static final String CAPES_JSON = "http://104.243.39.107/cdn/ne/capes/capes.json";
 }
