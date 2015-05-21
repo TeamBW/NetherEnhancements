@@ -7,3 +7,6 @@ item.itemNetherCookie.name=Nether Cookies
 
 #Misc
 itemGroup.ne=Nether Enhancements
+
+#Entitys
+entity.entityRectangleDeath.name=Rectangle Of Death
