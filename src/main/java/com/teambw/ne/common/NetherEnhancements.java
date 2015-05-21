@@ -2,7 +2,8 @@ package com.teambw.ne.common;
 
 import com.teambw.ne.client.gui.GuiHandler;
 import com.teambw.ne.common.block.RegisterBlocks;
-import com.teambw.ne.common.entity.EntityRectangleDeath;
+import com.teambw.ne.common.entity.EntityArmoredPigMan;
+import com.teambw.ne.common.entity.EntitySpeedyPigMan;
 import com.teambw.ne.common.handler.DropHandler;
 import com.teambw.ne.common.helper.LogHelper;
 import com.teambw.ne.common.item.RegisterItems;
@@ -15,10 +16,13 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.MinecraftForge;
 
 import java.util.Random;
@@ -41,9 +45,13 @@ public class NetherEnhancements {
         RegisterItems.preInit();
 
         GameRegistry.registerWorldGenerator(new OreGeneration(), 0);
-        GameRegistry.registerWorldGenerator(new WorldGen(), 0);
+        //GameRegistry.registerWorldGenerator(new WorldGen(), 0);
 
-        registerEntity(EntityRectangleDeath.class, "entityRectangleDeath");
+        registerEntity(EntitySpeedyPigMan.class, "entitySpeedyPigMan");
+        registerEntity(EntityArmoredPigMan.class, "entityArmoredPigMan");
+
+        EntityRegistry.addSpawn(EntitySpeedyPigMan.class, 10, 3, 5, EnumCreatureType.creature, BiomeGenBase.hell);
+        EntityRegistry.addSpawn(EntityArmoredPigMan.class, 10, 3, 5, EnumCreatureType.creature, BiomeGenBase.hell);
 
         LogHelper.info("Pre Initialization Complete");
     }
@@ -65,6 +73,12 @@ public class NetherEnhancements {
         LogHelper.info("Post Initialization Started");
 
         LogHelper.info("Post Initialization Complete");
+    }
+
+    @Mod.EventHandler
+    public void onServerStarting(FMLServerStartingEvent event) {
+
+        LogHelper.info("er... o/");
     }
 
     public static void registerEntity(Class entityClass, String name) {

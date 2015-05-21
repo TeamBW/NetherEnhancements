@@ -9,7 +9,6 @@ Nether moltenizer
 Cold blazepowder in moltenizer plus lava makes unstable blazepowder
 Chakonium plus unstable blazepowder in processor makes Chakonium gem
 Chakonium tools and armor
-Lucifer the nether boss
 
 -Omniite Ore
 -Activated blaze powder
