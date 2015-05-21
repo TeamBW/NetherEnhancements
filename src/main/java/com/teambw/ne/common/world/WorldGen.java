@@ -1,7 +1,7 @@
 package com.teambw.ne.common.world;
 
-import com.teambw.ne.common.world.structures.GeneratorNetherDungeon;
 import cpw.mods.fml.common.IWorldGenerator;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 
@@ -11,35 +11,28 @@ public class WorldGen implements IWorldGenerator {
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+        int x2 = 0;
+        int y2 = 100;
+        int z2 = 0;
 
-        switch (world.provider.dimensionId) {
-
-            case -1:
-                generateNether(world, random, chunkX, chunkZ);
-                break;
-            case 0:
-                generateOverworld(world, random, chunkX, chunkZ);
-                break;
-            case 1:
-                generateSky(world, random, chunkX, chunkZ);
-                break;
-        }
-    }
-
-    public void generateNether(World world, Random random, int x, int z) {
-
-        int Xcoord1 = x + random.nextInt(16);
-        int Ycoord1 = random.nextInt(60);
-        int Zcoord1 = z + random.nextInt(16);
-
-        (new GeneratorNetherDungeon()).generate(world, random, Xcoord1, Ycoord1, Zcoord1);
-    }
-
-    public void generateOverworld(World world, Random random, int x, int z) {
-
-    }
-
-    public void generateSky(World world, Random random, int x, int z) {
-
+        world.setBlock(x2, y2, z2, Blocks.diamond_block);
+        world.setBlock(x2-1, y2, z2, Blocks.obsidian);
+        world.setBlock(x2+1, y2, z2, Blocks.obsidian);
+        world.setBlock(x2, y2-1, z2, Blocks.obsidian);
+        world.setBlock(x2, y2+1, z2, Blocks.obsidian);
+        world.setBlock(x2, y2, z2-1, Blocks.obsidian);
+        world.setBlock(x2, y2, z2+1, Blocks.obsidian);
+        world.setBlock(x2-1, y2-1, z2, Blocks.obsidian);
+        world.setBlock(x2+1, y2-1, z2, Blocks.obsidian);
+        world.setBlock(x2+1, y2+1, z2, Blocks.obsidian);
+        world.setBlock(x2-1, y2+1, z2, Blocks.obsidian);
+        world.setBlock(x2, y2+1, z2-1, Blocks.obsidian);
+        world.setBlock(x2, y2-1, z2-1, Blocks.obsidian);
+        world.setBlock(x2, y2+1, z2+1, Blocks.obsidian);
+        world.setBlock(x2, y2-1, z2+1, Blocks.obsidian);
+        world.setBlock(x2+1, y2, z2-1, Blocks.obsidian);
+        world.setBlock(x2-1, y2, z2-1, Blocks.obsidian);
+        world.setBlock(x2+1, y2, z2+1, Blocks.obsidian);
+        world.setBlock(x2-1, y2, z2+1, Blocks.obsidian);
     }
 }

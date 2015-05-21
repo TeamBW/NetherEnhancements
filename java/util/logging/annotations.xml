@@ -1,0 +1,5 @@
+<root>
+  <item name='java.util.logging.Level INFO'>
+    <annotation name='java.lang.annotation.Deprecated'/>
+  </item>
+</root>
